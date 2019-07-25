@@ -12,8 +12,8 @@ node {
        //sh "mvn test";
    }
 
-   stage('Deploy') {
-       snDevOpsChange();
-   }
+   //stage('Deploy') {
+      // snDevOpsChange();
+   //}
 
 }
