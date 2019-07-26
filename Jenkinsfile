@@ -9,7 +9,7 @@ node {
    }
 
    stage('Test') {
-       sh 'mvn test';
+       junit '**/test-results/test/*.xml'
    }
 
    stage('Deploy') {
