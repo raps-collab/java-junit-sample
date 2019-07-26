@@ -9,17 +9,11 @@ node {
    }
 
    stage('Test') {
-       junit '**/test-results/test/*.xml'
+       junit '**/reports/junit/*.xml'
    }
 
    stage('Deploy') {
        snDevOpsChange();
    }
-
-   post {
-      always {
-        junit '**/reports/junit/*.xml'
-      }
-   } 
    
 }
