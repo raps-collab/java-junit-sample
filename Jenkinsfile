@@ -9,11 +9,17 @@ node {
    }
 
    stage('Test') {
-       //sh 'mvn test';
+       sh 'mvn test';
    }
 
    stage('Deploy') {
        snDevOpsChange();
    }
 
+   post {
+      always {
+        junit '**/reports/junit/*.xml'
+      }
+   } 
+   
 }
