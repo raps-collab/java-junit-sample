@@ -13,7 +13,7 @@ node {
    }
 
    stage('Deploy') {
-       snDevOpsChange();
+       kubectl 'deploy to production'
    }
    
 }
